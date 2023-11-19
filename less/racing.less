@@ -1,0 +1,55 @@
+
+@import "colors.less";
+@import "fonts.less";
+
+@default-padding: 20px;
+@default-margin: 10px;
+@header-font-size: 24px;
+@paragraph-font-size: 16px;
+@footer-text-color: #888;
+
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+// Body and layout styles
+body {
+  font-family: @body-font;
+  font-size: @paragraph-font-size;
+  transition: ease all 0.5s;
+
+// New Collection Section
+.collection_text {
+  color: @primary-color;
+}
+
+// About Main Section
+.about_main {
+  padding: @default-padding;
+  // Nested collection section within about_main
+  .collection_section {
+    padding: @default-padding;
+    .container {
+      h1.new_text {
+        font-size: @header-font-size;
+        font-weight: bold;
+        font-family: @heading-font;
+      }
+      p.consectetur_text {
+        color: @text-color;
+      }
+    }
+  }
+}
+
+// Footer styles
+footer {
+  color: @footer-text-color;
+  padding: @default-padding;
+  .copyright {
+    text-align: center;
+    font-size: @paragraph-font-size;
+  }
+}
